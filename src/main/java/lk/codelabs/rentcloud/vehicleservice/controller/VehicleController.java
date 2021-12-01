@@ -1,6 +1,7 @@
 package lk.codelabs.rentcloud.vehicleservice.controller;
 
-import lk.codelabs.rentcloud.model.vehicle.Vehicle;
+
+import lk.codelabs.rentcloud.vehicleservice.model.Vehicle;
 import lk.codelabs.rentcloud.vehicleservice.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import java.util.List;
 public class VehicleController {
 
     @Autowired
-    VehicleService vehicleService;
+    private VehicleService vehicleService;
 
     @PostMapping
     public Vehicle save(@RequestBody Vehicle vehicle) {
@@ -21,9 +22,8 @@ public class VehicleController {
     }
 
     @GetMapping(value = "/{id}")
-    public Vehicle getVehicle(@PathVariable int id)
-    {
-        System.out.println("request came on "+LocalDateTime.now() + "  ++++++++++++++++++++++");
+    public Vehicle getVehicle(@PathVariable int id) {
+        System.out.println("request came on " + LocalDateTime.now() + "  ++++++++++++++++++++++");
         return vehicleService.findById(id);
     }
 

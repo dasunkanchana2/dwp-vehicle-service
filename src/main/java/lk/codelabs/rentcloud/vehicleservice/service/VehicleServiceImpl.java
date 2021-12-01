@@ -1,6 +1,7 @@
 package lk.codelabs.rentcloud.vehicleservice.service;
 
-import lk.codelabs.rentcloud.model.vehicle.Vehicle;
+
+import lk.codelabs.rentcloud.vehicleservice.model.Vehicle;
 import lk.codelabs.rentcloud.vehicleservice.repository.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
